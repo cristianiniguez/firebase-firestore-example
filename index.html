@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase CRUD</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <form id="task-form">
+              <div class="form-group">
+                <input type="text" id="task-title" class="form-control" placeholder="Task title" autofocus>
+              </div>
+              <div class="form-group">
+                <textarea id="task-description" rows="3" class="form-control" placeholder="Task description"></textarea>
+              </div>
+              <button class="btn btn-primary" id="btn-task-form">Save</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" id="tasks-container">
+
+      </div>
+    </div>
+  </div>
+  <!-- Firebase Scripts -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyB77Fg930LCgjBA2FgUtPklW-tF2zz2sYc",
+      authDomain: "fb-firestore-crud.firebaseapp.com",
+      databaseURL: "https://fb-firestore-crud.firebaseio.com",
+      projectId: "fb-firestore-crud",
+      storageBucket: "fb-firestore-crud.appspot.com",
+      messagingSenderId: "1046636682662",
+      appId: "1:1046636682662:web:19c249279cdb8160648367"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="index.js"></script>
+</body>
+
+</html>
